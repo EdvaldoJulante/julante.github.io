@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu Nome - Página Inicial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        nav {
+            text-align: center;
+            background-color: #2c3e50;
+            padding: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            padding: 10px 15px;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #34495e;
+        }
+
+        .dropdown-toggle {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 150px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+
+        .dropdown a {
+            color: #333;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+        }
+
+        .dropdown a:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Estilo para a lista suspensa */
+        select {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 20px;
+        }
+
+        article {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        aside {
+            flex-basis: 300px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        /* Carrossel de Imagens */
+        .carousel {
+            width: 100%;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .carousel img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Formulário de Contato */
+        form {
+            margin-top: 20px;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        form button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Seu Nome</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Nossa Equipa</a>
+        <div class="dropdown-toggle">
+            <a href="#">Sobre</a>
+            <!-- Lista suspensa para "Vagas" e "Galeria" -->
+            <div class="dropdown">
+                <a href="#">
+                    <select>
+                        <option value="vagas">Vagas</option>
+                        <option value="galeria">Galeria</option>
+                    </select>
+                </a>
+            </div>
+        </div>
+        <a href="#">Contactos</a>
+    </nav>
+
+    <section>
+        <article>
+            <h2>Últimas Notícias</h2>
+            <p>Algumas informações interessantes e relevantes aqui...</p>
+        </article>
+
+        <aside>
+            <h2>Vídeos</h2>
+            <iframe width="100%" height="200" src="https://www.youtube.com/embed/seuvideo" frameborder="0" allowfullscreen></iframe>
+        </aside>
+    </section>
+
+    <section>
+        <article>
+            <h2>Blog</h2>
+            <p>Últimas postagens do blog...</p>
+        </article>
+
+        <aside>
+            <h2>Imagens</h2>
+            <div class="carousel">
+                <img src="imagem1.jpg" alt="Imagem 1">
+                <img src="imagem2.jpg" alt="Imagem 2">
+                <img src="imagem3.jpg" alt="Imagem 3">
+            </div>
+        </aside>
+    </section>
+
+    <section>
+        <article>
+            <h2>Formulário de Contato</h2>
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </article>
+
+        <aside>
+            <h2>Outras Informações</h2>
+            <p>Adicione aqui outras informações importantes ou links relevantes.</p>
+        </aside>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Seu Nome. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
